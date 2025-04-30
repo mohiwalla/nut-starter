@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router"
-import HomePage from "../app/page"
-import NotFound from "../app/not-found"
+import HomePage from "./home"
+import NotFound from "./not-found"
 
 export default function Router() {
     return (
