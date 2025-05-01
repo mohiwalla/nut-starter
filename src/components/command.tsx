@@ -15,7 +15,7 @@ import {
 	CommandItem,
 	CommandList,
 } from "@/components/ui/command"
-import { Button } from "../ui/button"
+import { Button } from "./ui/button"
 import { useNavigate } from "react-router-dom"
 import { CommandSeparator } from "cmdk"
 

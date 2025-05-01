@@ -8,7 +8,7 @@ export default function NotFound() {
 
 	return (
 		<FadeUp>
-			<main className="h-screen grid place-items-center">
+			<main className="h-[calc(100vh-69px)] grid place-items-center">
 				<div className="flex flex-col gap-4 p-6 text-center max-w-[300px]">
 					<hgroup>
 						<h1 className="text-6xl font-bold">404</h1>

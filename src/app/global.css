@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+	font-family: Penpoint;
+	src: url("/fonts/Penpoint.otf") format("opentype");
+}
+
 :root {
 	--radius: 0.625rem;
 	--background: oklch(1 0 0);
@@ -146,5 +151,11 @@
 
 	button {
 		@apply cursor-default;
+	}
+}
+
+@layer utilities {
+	.font-penpoint {
+		font-family: Penpoint;
 	}
 }
