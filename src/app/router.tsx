@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router"
 import HomePage from "./home"
 import NotFound from "./not-found"
 import Header from "@/components/header"
+import Footer from "@/components/footer"
 
 export default function Router() {
 	return (
@@ -12,6 +13,8 @@ export default function Router() {
 				<Route path="*" element={<NotFound />} />
 				<Route index path="/" element={<HomePage />} />
 			</Routes>
+
+			<Footer />
 		</BrowserRouter>
 	)
 }

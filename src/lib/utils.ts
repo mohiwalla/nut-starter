@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { API_ENDPOINT, DEV } from "./config"
+import { API_ENDPOINT } from "./config"
 import { BaseResponse } from "@/types/response"
 
 export function cn(...inputs: ClassValue[]) {
@@ -31,9 +31,7 @@ export async function fetchAPI<T>(
 
 		return { ok: res.ok, text: "", ...res } as T & BaseResponse
 	} catch (e) {
-		if (DEV) {
-			console.error(e)
-		}
+		console.error(e)
 
 		return {
 			ok: false,

@@ -1,22 +1,53 @@
-import { Link } from "react-router-dom"
+import { Button } from "./ui/button"
+import { FileText } from "lucide-react"
+import { Link, useLocation } from "react-router-dom"
 import Logo from "./logo"
-import { GlobalCommandSearch } from "./command"
+
+const NAV_LINKS = [
+	{ href: "/", label: "Home" },
+	{ href: "/blogs", label: "Blog" },
+	{ href: "/projects", label: "Projects" },
+]
 
 export default function Header() {
+	const { pathname } = useLocation()
+
 	return (
-		<header className="w-full border-b border-b-white/20 backdrop-blur">
+		<header className="sticky top-0 z-50 w-full border-b backdrop-blur">
 			<nav>
-				<div className="container mx-auto flex flex-wrap items-center justify-between py-4">
-					<Link to="/" className="flex items-center">
+				<div className="container py-4 px-8 mx-auto flex flex-wrap items-center justify-between">
+					<Link to="/">
 						<Logo />
 					</Link>
 
-					<div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-						<ul className="flex flex-row gap-2">
-							<li>
-								<GlobalCommandSearch />
+					<ul className="hidden md:flex flex-row gap-4">
+						{NAV_LINKS.map((link) => (
+							<li key={link.label}>
+								<Button
+									asChild
+									variant={
+										pathname === link.href
+											? "secondary"
+											: "ghost"
+									}
+								>
+									<Link to={link.href}>{link.label}</Link>
+								</Button>
 							</li>
-						</ul>
+						))}
+					</ul>
+
+					<div className="flex gap-3 items-center">
+						<Button asChild>
+							<a
+								target="_blank"
+								className="flex"
+								href="/resume.pdf"
+							>
+								Resume
+								<FileText className="size-5" />
+							</a>
+						</Button>
 					</div>
 				</div>
 			</nav>

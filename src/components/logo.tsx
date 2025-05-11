@@ -6,8 +6,15 @@ export default function Logo({
 	...props
 }: React.HTMLAttributes<HTMLSpanElement>) {
 	return (
-		<span {...props} className={cn("font-[cursive] font-bold text-xl", className)}>
-			{name}
+		<span
+			{...props}
+			className={cn(
+				"font-bold text-xl md:text-2xl flex items-center gap-4",
+				className
+			)}
+		>
+			<img src="/logo.png" className="h-8 w-full rounded-full" alt="" />
+			<span>{name}</span>
 		</span>
 	)
 }

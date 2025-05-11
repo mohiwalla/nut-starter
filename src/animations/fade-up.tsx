@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 export default function FadeUp({
 	children,
 	delay = 0,
-	duration = 0.3,
+	duration = 0.6,
 	className = "",
 }: {
 	delay?: number
