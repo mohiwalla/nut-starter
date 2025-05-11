@@ -66,7 +66,7 @@ export default function HomePage() {
 							<img
 								alt=""
 								draggable={false}
-								src="/logo.png"
+								src="/images/logo.png"
 								className="rounded-full w-80"
 							/>
 						</DraggableSpring>
@@ -391,7 +391,7 @@ export default function HomePage() {
 											<div className="mr-1">
 												<div className="flex h-4 items-center rounded-md w-4 bg-secondary">
 													<img
-														src="/logo.png"
+														src="/images/logo.png"
 														alt=""
 													/>
 												</div>

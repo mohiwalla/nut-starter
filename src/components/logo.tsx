@@ -13,7 +13,7 @@ export default function Logo({
 				className
 			)}
 		>
-			<img src="/logo.png" className="h-8 w-full rounded-full" alt="" />
+			<img src="/images/logo.png" className="h-8 w-full rounded-full" alt="" />
 			<span>{name}</span>
 		</span>
 	)

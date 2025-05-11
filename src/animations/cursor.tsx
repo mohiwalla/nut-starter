@@ -20,7 +20,7 @@ export default function Cursor() {
 			const target = document.elementFromPoint(e.clientX, e.clientY)
 			const isPointer = target?.closest("a") || target?.closest("button")
 
-			scale.set(isPointer ? 2.2 : 0.6)
+			scale.set(isPointer ? 1.5 : 0.5)
 		}
 
 		window.addEventListener("mousemove", moveCursor, { passive: true })
